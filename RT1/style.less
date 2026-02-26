@@ -1,0 +1,60 @@
+// ✅ Переменные
+@primary-color: #4f46e5;
+@card-bg: #ffffff;
+@text-color: #333;
+
+// ✅ Миксин
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ✅ Стили страницы
+body {
+  .flex-center();
+  height: 100vh;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+// ✅ Карточка
+.product-card {
+  background: @card-bg;
+  width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  &__image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    color: @text-color;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    background: @primary-color;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(@primary-color, 10%);
+    }
+  }
+}
